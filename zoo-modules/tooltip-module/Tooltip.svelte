@@ -1,12 +1,14 @@
 <svelte:options tag="zoo-tooltip"></svelte:options>
-<div bind:this={_tooltipRoot} class="box {position} {hidden ? 'hide' : 'show'}">
-	<div class="tooltip-content">
-		<slot>
-			{#if text}<span class="text">{text}</span>{/if}
-		</slot>
+<div class="holder" bind:this={_tooltipRoot}>
+	<div class="box {position} {hidden ? 'hide' : 'show'}">
+		<div class="tooltip-content">
+			<slot>
+				{#if text}<span class="text">{text}</span>{/if}
+			</slot>
+		</div>
+		<div class="tip"></div>	
 	</div>
-	<div class="tip {position}" bind:this={tip}></div>	
-</div>
+</div> 
 
 <style type='text/scss'>
 	@import "variables";
@@ -24,9 +26,51 @@
 		font-weight: initial;
 		contain: layout;
 		justify-content: center;
+		color: black;
+	}
+	.holder {
+		width: 100%;
 	}
 	.box {
 		transition: opacity 0.3s, transform 0.3s;
+		pointer-events: initial;
+		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+		border-radius: 3px;
+		position: absolute;
+		&.top {
+			bottom: calc(100% + 14px);
+			.tip {
+				width: 0;
+				right: calc(50% + 8px);
+			}
+		}
+		&.right {
+			left: 98%;
+			top: 50%;
+			.tip {
+				bottom: 50%;
+				left: -8px;
+				right: 100%;
+			}
+		}
+		&.bottom {
+			top: 98%;
+			right: 50%;
+			.tip {
+				top: 0;
+				width: 0px;
+				right: calc(50% + 8px);
+			}
+		}
+		&.left {
+			left: 2%;
+			top: 50%;
+			.tip {
+				bottom: 50%;
+				right: 8px;
+				width: 0px;
+			}
+		}
 	}
 	.box.hide {
 		opacity: 0;
@@ -36,30 +80,11 @@
 		&.left {transform: translate3d(-120%,-50%,0);}
 	}
 	.box.show {
-		pointer-events: initial;
-		box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.12), 0 2px 12px 0 rgba(0, 0, 0, 0.12);
-		border-radius: 3px;
-		position: absolute;
-		max-width: 150%;
 		opacity: 1;
-		&.top {
-			bottom: calc(100% + 14px);
-		}
-		&.right {
-			left: 98%;
-			top: 50%;
-			transform: translate3d(8%,-50%,0);
-		}
-		&.bottom {
-			top: 98%;
-			right: 50%;
-			transform: translate3d(50%,20%,0);
-		}
-		&.left {
-			left: 2%;
-			top: 50%;
-			transform: translate3d(-110%,-50%,0);
-		}
+		&.top {transform: translate3d(0,0,0);}
+		&.right {transform: translate3d(8%,-50%,0);}
+		&.bottom {transform: translate3d(50%,20%,0);}
+		&.left {transform: translate3d(-110%,-50%,0);}
 	}
 	.tooltip-content {
 	  padding: 10px;
@@ -68,8 +93,11 @@
 	  z-index: 1;
 	  background: white;
 	  border-radius: 3px;
+	  display: inline-block;
+	  min-width: 150px;
+		text-align: center;
 	  .text {
-	  	white-space: pre;
+		  white-space: pre;
 	  }
 	}
 	.tip {
@@ -87,88 +115,75 @@
 			z-index: 0;
     		background: white;
 		}
-		&.top {
-			width: 0;
-			right: calc(50% + 8px);
-		}
-		&.right {
-			bottom: 50%;
-    		left: -8px;
-			right: 100%;
-		}
-		&.bottom {
-			top: 0;
-			width: 0px;
-			right: calc(50% + 8px);
-		}
-		&.left {
-			bottom: 50%;
-    		right: 8px;
-			width: 0px;
-		}
+	}
+	::slotted(*) {
+		pointer-events: all;
 	}
 </style>
 
 <script>
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, afterUpdate } from 'svelte';
 
 	export let text = '';
 	export let position = 'top'; // left, right, bottom
-	let _tooltipRoot;
-	let observer;
-	let documentObserver;
-	let tip;
+	export let target = '';
+	export let behaviour = 'hover'; //click
+
 	let hidden = true;
-	onMount(() => {
-		const options = {
-			root: _tooltipRoot.getRootNode().host,
-			rootMargin: '150px',
-			threshold: 1.0
+	let tooltipTarget;
+	let _tooltipRoot;
+	let prevBeh;
+	let timeout;
+
+	afterUpdate(() => {
+		if (!tooltipTarget && target){
+			tooltipTarget = document.querySelector('#' + target);
+			attachListeners();
 		}
-		const documentOptions = {
-			root: document.body,
-			rootMargin: '150px',
-			threshold: 1.0
+		if (behaviour !== prevBeh) {
+			prevBeh = behaviour;
+			attachListeners();
 		}
-		observer = new IntersectionObserver(callback, options);
-		observer.observe(tip);
-		documentObserver = new IntersectionObserver(documentCallback, documentOptions);
-		documentObserver.observe(_tooltipRoot);
 	});
-	// good enough for v1 I guess....
-	const documentCallback = (entries, observer) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				switch(position) {
-					case 'top':
-						if (entry.intersectionRect.top < 0) position = 'bottom';
-						break;
-					case 'right':
-						const ir = entry.intersectionRect;
-						if (ir.right + ir.width > window.innerWidth) position = 'top';
-						break;
-					case 'bottom':
-						const bcr = entry.boundingClientRect;
-						if (bcr.bottom > window.innerHeight) position = 'top';
-						break;
-					case 'left':
-						if (entry.intersectionRect.left < -25) position = 'top';
-						break;
-				}
-			}
+
+	const attachListeners = () => {
+		if (!tooltipTarget) return;
+		_tooltipRoot.addEventListener('mouseenter', e => {
+			clearTimeout(timeout);
+			hidden = false;
 		});
+		switch (behaviour) {
+			case 'hover':
+				tooltipTarget.removeEventListener('click', e => hidden ? show() : hide(), false);
+				tooltipTarget.addEventListener('mouseenter', show);
+				tooltipTarget.addEventListener('mouseleave', mouseleave);
+				break;
+			case 'click':
+				tooltipTarget.removeEventListener('mouseenter', show, false);
+				tooltipTarget.removeEventListener('mouseleave', mouseleave, false);
+				tooltipTarget.addEventListener('click', e => hidden ? show() : hide());
+				break;
+			default:
+				break;
+		}
 	}
-	const callback = (entries, observer) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				hidden = false;
-			} else {
-				hidden = true;
-			}
-		});
+
+	const mouseleave = e => {
+		if (e.relatedTarget !== _tooltipRoot.getRootNode().host) {
+			hide();
+		}
 	}
-	onDestroy(() => {
-		observer.disconnect();
-		documentObserver.disconnect();
-	});
+
+	const show = () => {
+		_tooltipRoot.style.display = 'flex';
+		setTimeout(() => {
+			hidden = false;
+		}, 40);
+	}
+	const hide = () => {
+		hidden = true;
+		timeout = setTimeout(() => {
+			_tooltipRoot.style.display = 'none';
+		}, 300);
+	}
 </script>

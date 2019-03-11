@@ -132,10 +132,10 @@
 				<span class="slotted-span">Here we have a very long text indeed!</span>
 			</div>
 		</zoo-button>
-		<zoo-button size="medium" disabled="{true}" class="top-tooltip">
+		<zoo-button size="medium" disabled="{true}" class="top-tooltip" id="button-tooltip">
 			<div slot="buttoncontent">
 				Disabled :(
-				<zoo-tooltip position="bottom"
+				<zoo-tooltip position="bottom" target="button-tooltip"
 					text="Just set disabled attribute on `zoo-button`">
 				</zoo-tooltip>
 			</div>
@@ -159,16 +159,16 @@
 			<zoo-feedback type="success" text="This is a success message. Only one coupon can be accepted with each order. Please choose one coupon that you just entered."></zoo-feedback>
 		</div>
 		<div class="special-tooltip"> 
-			<span on:click="{showSpecialTooltip}">
+			<span id="btn-tooltip">
 				This element will show tooltip on top only when it is clicked.
 			</span>
-			<zoo-tooltip bind:this={specialTooltip} text="Hello from up above">
-				<div>
+			<zoo-tooltip text="Hello from up above" target="btn-tooltip" behaviour="click">
+				<div id="input-in-tooltip">
 					<zoo-input class="input-in-tooltip">
 						<input slot="inputelement" placeholder="Search for more than 8.000 products"/>
-						<span class="icon-search-default" slot="inputicon"></span>
 					</zoo-input>
-					<zoo-tooltip class="nested-tooltip" position="right" text="Hello from nested tooltip.">
+					<zoo-tooltip class="nested-tooltip" position="right" text="Hello from nested tooltip."
+						target="input-in-tooltip">
 					</zoo-tooltip>
 				</div>
 			</zoo-tooltip>
@@ -180,15 +180,15 @@
 			</zoo-tooltip>
 		</div>
 		<br>
-		<div class="top-tooltip"> 
+		<div class="top-tooltip" id="left-tooltip"> 
 			This element will show tooltip on the left side on hover.
-			<zoo-tooltip position="left" text="Hello from left side.">
+			<zoo-tooltip position="left" text="Hello from left side." target="left-tooltip">
 			</zoo-tooltip>
 		</div>
 		<br>
-		<div class="top-tooltip"> 
+		<div class="top-tooltip" id="bottom-tooltip"> 
 			This element will show tooltip on the bottom side on hover.
-			<zoo-tooltip position="bottom" text="Hello from below">
+			<zoo-tooltip position="bottom" text="Hello from below" target="bottom-tooltip">
 			</zoo-tooltip>
 		</div>
 	</div>
@@ -326,9 +326,6 @@
 		width: 200px;
 		position: relative;
 		cursor: pointer;
-		zoo-tooltip {
-			display: none;
-		}
 	}
 	.top-tooltip {
 		position: relative;
@@ -473,11 +470,6 @@
 
 	const showModal = () => {
 		modal.style.display = 'block';
-	};
-	const showSpecialTooltip = () => {
-		const elStyle = specialTooltip.style;
-		const display = !elStyle.display || elStyle.display === 'none' ? 'block' : 'none';
-		elStyle.display = display;
 	};
 	const handleModalClosed = () => {
 		console.log('modal closed');
