@@ -2,7 +2,7 @@
 <div class="box">
 	{#if !_isMobile}
 		{#if tooltipText}
-			<zoo-tooltip class="selected-options" position="right" text="{tooltipText}" folding="{true}">
+			<zoo-tooltip bind:this={selectTooltip} class="selected-options" position="right" text="{tooltipText}">
 			</zoo-tooltip>
 		{/if}
 		<zoo-input class:mobile="{_isMobile}" infotext="{infotext}" valid="{valid}" on:click="{event => handleInputClick(event)}"
@@ -95,6 +95,7 @@
 	let options;
 	let _isMobile;
 	let tooltipText;
+	let selectTooltip;
 
 	beforeUpdate(() => {
 		if (valid != _prevValid) {
@@ -157,6 +158,9 @@
 		}
 		inputValString = inputValString.substr(0, inputValString.length - 3);
 		tooltipText = inputValString;
+		setTimeout(() => {
+			selectTooltip.targetprop = searchableInput;
+		}, 10);
 		searchableInput.placeholder = inputValString && inputValString.length > 0 ? inputValString : placeholder;
 		if (!multiple) {
 			_hideSelectOptions();

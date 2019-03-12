@@ -122,11 +122,12 @@
 </style>
 
 <script>
-	import { onMount, afterUpdate } from 'svelte';
+	import { afterUpdate } from 'svelte';
 
 	export let text = '';
 	export let position = 'top'; // left, right, bottom
 	export let target = '';
+	export let targetprop;
 	export let behaviour = 'hover'; //click
 
 	let hidden = true;
@@ -138,6 +139,9 @@
 	afterUpdate(() => {
 		if (!tooltipTarget && target){
 			tooltipTarget = document.querySelector('#' + target);
+			attachListeners();
+		} else if (!tooltipTarget && targetprop){
+			tooltipTarget = targetprop;
 			attachListeners();
 		}
 		if (behaviour !== prevBeh) {
