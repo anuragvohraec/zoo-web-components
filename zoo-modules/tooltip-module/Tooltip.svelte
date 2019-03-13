@@ -42,6 +42,7 @@
 			.tip {
 				width: 0;
 				right: calc(50% + 8px);
+				bottom: 0px;
 			}
 		}
 		&.right {
