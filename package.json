@@ -10,6 +10,7 @@
 	"description": "Set of web-components implementing zoo+ style guide",
 	"person": "Yuriy Kravets <yuriy.kravets@zooplus.com>",
 	"devDependencies": {
+		"@shop/icon-fonts": "^2.0.1",
 		"@types/mocha": "^5.2.0",
 		"chai": "^4.2.0",
 		"mocha": "^5.2.0",

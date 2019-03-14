@@ -6,17 +6,14 @@ describe('Zoo tooltip', function() {
 				tooltip.text = 'some-text';
 				document.body.appendChild(tooltip);
 				const tooltipBox = tooltip.shadowRoot.querySelector('.box');
-				const tooltipTip = tooltip.shadowRoot.querySelector('.tip');
 				const tooltiptext = tooltip.shadowRoot.querySelector('.text');
 				const tooltipAttrs = {
 					tooltipBoxPositionTopClass: tooltipBox.classList.contains('top'),
-					tooltipTipPositionTopClass: tooltipTip.classList.contains('top'),
 					tooltipText: tooltiptext.innerHTML
 				};
 				return tooltipAttrs;
 			});
 			expect(tooltipAttrs.tooltipBoxPositionTopClass).to.be.true;
-			expect(tooltipAttrs.tooltipTipPositionTopClass).to.be.true;
 			expect(tooltipAttrs.tooltipText).equal('some-text');
 		});
 
@@ -26,15 +23,12 @@ describe('Zoo tooltip', function() {
 				tooltip.position = 'left';
 				document.body.appendChild(tooltip);
 				const tooltipBox = tooltip.shadowRoot.querySelector('.box');
-				const tooltipTip = tooltip.shadowRoot.querySelector('.tip');
 				const tooltipAttrs = {
-					tooltipBoxPositionLeftClass: tooltipBox.classList.contains('left'),
-					tooltipTipPositionLeftClass: tooltipTip.classList.contains('left')
+					tooltipBoxPositionLeftClass: tooltipBox.classList.contains('left')
 				};
 				return tooltipAttrs;
 			});
 			expect(tooltipAttrs.tooltipBoxPositionLeftClass).to.be.true;
-			expect(tooltipAttrs.tooltipTipPositionLeftClass).to.be.true;
 		});
 
 		it('should create right tooltip', async() => {
@@ -43,15 +37,12 @@ describe('Zoo tooltip', function() {
 				tooltip.position = 'right';
 				document.body.appendChild(tooltip);
 				const tooltipBox = tooltip.shadowRoot.querySelector('.box');
-				const tooltipTip = tooltip.shadowRoot.querySelector('.tip');
 				const tooltipAttrs = {
-					tooltipBoxPositionRightClass: tooltipBox.classList.contains('right'),
-					tooltipTipPositionRightClass: tooltipTip.classList.contains('right')
+					tooltipBoxPositionRightClass: tooltipBox.classList.contains('right')
 				};
 				return tooltipAttrs;
 			});
 			expect(tooltipAttrs.tooltipBoxPositionRightClass).to.be.true;
-			expect(tooltipAttrs.tooltipTipPositionRightClass).to.be.true;
 		});
 
 		it('should create bottom tooltip', async() => {
@@ -60,15 +51,12 @@ describe('Zoo tooltip', function() {
 				tooltip.position = 'bottom';
 				document.body.appendChild(tooltip);
 				const tooltipBox = tooltip.shadowRoot.querySelector('.box');
-				const tooltipTip = tooltip.shadowRoot.querySelector('.tip');
 				const tooltipAttrs = {
-					tooltipBoxPositionBottomClass: tooltipBox.classList.contains('bottom'),
-					tooltipTipPositionBottomClass: tooltipTip.classList.contains('bottom')
+					tooltipBoxPositionBottomClass: tooltipBox.classList.contains('bottom')
 				};
 				return tooltipAttrs;
 			});
 			expect(tooltipAttrs.tooltipBoxPositionBottomClass).to.be.true;
-			expect(tooltipAttrs.tooltipTipPositionBottomClass).to.be.true;
 		});
 
 		it('should create tooltip with slot', async() => {

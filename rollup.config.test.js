@@ -71,8 +71,8 @@ export default [
 		output: {
 			sourcemap: true,
 			format: 'iife',
-			file: 'public/test.js',
-			name: 'test'
+			file: 'public/app.js',
+			name: 'app'
 		}
 	},
 	Object.assign({}, shared, {
