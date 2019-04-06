@@ -10,8 +10,16 @@
 	<tr slot="row"><td>Body content 5</td><td>Body content 6</td></tr>
 	<tr slot="row" disabled><td>Body content 7</td><td>Body content 8</td></tr>
 	<tr slot="footer">
-		<td colspan="1000">Footer content which is spanned across maximum number of columns which is 1000</td>
-		<!-- <td>Footer content 2</td> -->
+		<div>Footer content 1</div>
+		<div style="width: 100px">
+			<zoo-select labelposition="left" labeltext="Page size:">
+				<select type="number" slot="selectelement">
+					<option>5</option>
+					<option>10</option>
+					<option>15</option>
+				</select>
+			</zoo-select>
+		</div>
 	</tr>
 </zoo-grid>
 <form class="form">

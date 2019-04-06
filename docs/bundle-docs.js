@@ -858,7 +858,7 @@
 		return child_ctx;
 	}
 
-	// (54:3) {#each options as option}
+	// (62:3) {#each options as option}
 	function create_each_block_1(ctx) {
 		var option, t_value = ctx.option.text, t, option_value_value;
 
@@ -868,7 +868,7 @@
 				t = text(t_value);
 				option.__value = option_value_value = ctx.option.value;
 				option.value = option.__value;
-				add_location(option, file$2, 54, 3, 2987);
+				add_location(option, file$2, 62, 3, 3134);
 			},
 
 			m: function mount(target, anchor) {
@@ -888,7 +888,7 @@
 		};
 	}
 
-	// (63:3) {#each options as option}
+	// (71:3) {#each options as option}
 	function create_each_block$1(ctx) {
 		var option, t_value = ctx.option.text, t, option_value_value;
 
@@ -898,7 +898,7 @@
 				t = text(t_value);
 				option.__value = option_value_value = ctx.option.value;
 				option.value = option.__value;
-				add_location(option, file$2, 63, 3, 3310);
+				add_location(option, file$2, 71, 3, 3457);
 			},
 
 			m: function mount(target, anchor) {
@@ -919,7 +919,7 @@
 	}
 
 	function create_fragment$2(ctx) {
-		var app_context, t0, zoo_grid, tr0, th0, t2, th1, t4, tr1, td0, td1, t7, tr2, td2, td3, t10, tr3, td4, td5, t13, tr4, td6, td7, t16, tr5, td8, t18, form, zoo_input0, input0, t19, zoo_input1, input1, t20, zoo_input2, input2, t21, zoo_input3, input3, t22, zoo_input4, textarea, t23, zoo_select0, select0, option0, option1, option2, option3, t28, zoo_select1, select1, option4, option5, option6, option7, t33, zoo_searchable_select0, select2, t34, zoo_searchable_select1, select3, t35, zoo_checkbox, input4, t36, zoo_radio0, template, input5, t37, label0, t39, input6, t40, label1, t42, input7, t43, label2, t45, zoo_radio1, input8, t46, label3, t48, input9, t49, label4, t51, div, zoo_button, span, dispose;
+		var app_context, t0, zoo_grid, tr0, th0, t2, th1, t4, tr1, td0, td1, t7, tr2, td2, td3, t10, tr3, td4, td5, t13, tr4, td6, td7, t16, tr5, div0, t18, div1, zoo_select0, select0, option0, option1, option2, t22, form, zoo_input0, input0, t23, zoo_input1, input1, t24, zoo_input2, input2, t25, zoo_input3, input3, t26, zoo_input4, textarea, t27, zoo_select1, select1, option3, option4, option5, option6, t32, zoo_select2, select2, option7, option8, option9, option10, t37, zoo_searchable_select0, select3, t38, zoo_searchable_select1, select4, t39, zoo_checkbox, input4, t40, zoo_radio0, template, input5, t41, label0, t43, input6, t44, label1, t46, input7, t47, label2, t49, zoo_radio1, input8, t50, label3, t52, input9, t53, label4, t55, div2, zoo_button, span, dispose;
 
 		var each_value_1 = ctx.options;
 
@@ -974,95 +974,105 @@
 				td7.textContent = "Body content 8";
 				t16 = space();
 				tr5 = element("tr");
-				td8 = element("td");
-				td8.textContent = "Footer content which is spanned across maximum number of columns which is 1000";
+				div0 = element("div");
+				div0.textContent = "Footer content 1";
 				t18 = space();
-				form = element("form");
-				zoo_input0 = element("zoo-input");
-				input0 = element("input");
-				t19 = space();
-				zoo_input1 = element("zoo-input");
-				input1 = element("input");
-				t20 = space();
-				zoo_input2 = element("zoo-input");
-				input2 = element("input");
-				t21 = space();
-				zoo_input3 = element("zoo-input");
-				input3 = element("input");
-				t22 = space();
-				zoo_input4 = element("zoo-input");
-				textarea = element("textarea");
-				t23 = space();
+				div1 = element("div");
 				zoo_select0 = element("zoo-select");
 				select0 = element("select");
 				option0 = element("option");
-				option0.textContent = "Placeholder";
+				option0.textContent = "5";
 				option1 = element("option");
-				option1.textContent = "1";
+				option1.textContent = "10";
 				option2 = element("option");
-				option2.textContent = "2";
-				option3 = element("option");
-				option3.textContent = "3";
-				t28 = space();
+				option2.textContent = "15";
+				t22 = space();
+				form = element("form");
+				zoo_input0 = element("zoo-input");
+				input0 = element("input");
+				t23 = space();
+				zoo_input1 = element("zoo-input");
+				input1 = element("input");
+				t24 = space();
+				zoo_input2 = element("zoo-input");
+				input2 = element("input");
+				t25 = space();
+				zoo_input3 = element("zoo-input");
+				input3 = element("input");
+				t26 = space();
+				zoo_input4 = element("zoo-input");
+				textarea = element("textarea");
+				t27 = space();
 				zoo_select1 = element("zoo-select");
 				select1 = element("select");
+				option3 = element("option");
+				option3.textContent = "Placeholder";
 				option4 = element("option");
-				option4.textContent = "Placeholder";
+				option4.textContent = "1";
 				option5 = element("option");
-				option5.textContent = "1";
+				option5.textContent = "2";
 				option6 = element("option");
-				option6.textContent = "2";
-				option7 = element("option");
-				option7.textContent = "3";
-				t33 = space();
-				zoo_searchable_select0 = element("zoo-searchable-select");
+				option6.textContent = "3";
+				t32 = space();
+				zoo_select2 = element("zoo-select");
 				select2 = element("select");
+				option7 = element("option");
+				option7.textContent = "Placeholder";
+				option8 = element("option");
+				option8.textContent = "1";
+				option9 = element("option");
+				option9.textContent = "2";
+				option10 = element("option");
+				option10.textContent = "3";
+				t37 = space();
+				zoo_searchable_select0 = element("zoo-searchable-select");
+				select3 = element("select");
 
 				for (var i = 0; i < each_blocks_1.length; i += 1) {
 					each_blocks_1[i].c();
 				}
 
-				t34 = space();
+				t38 = space();
 				zoo_searchable_select1 = element("zoo-searchable-select");
-				select3 = element("select");
+				select4 = element("select");
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
 					each_blocks[i].c();
 				}
 
-				t35 = space();
+				t39 = space();
 				zoo_checkbox = element("zoo-checkbox");
 				input4 = element("input");
-				t36 = space();
+				t40 = space();
 				zoo_radio0 = element("zoo-radio");
 				template = element("template");
 				input5 = element("input");
-				t37 = space();
+				t41 = space();
 				label0 = element("label");
 				label0.textContent = "Email";
-				t39 = space();
+				t43 = space();
 				input6 = element("input");
-				t40 = space();
+				t44 = space();
 				label1 = element("label");
 				label1.textContent = "Phone";
-				t42 = space();
+				t46 = space();
 				input7 = element("input");
-				t43 = space();
+				t47 = space();
 				label2 = element("label");
 				label2.textContent = "Mail";
-				t45 = space();
+				t49 = space();
 				zoo_radio1 = element("zoo-radio");
 				input8 = element("input");
-				t46 = space();
+				t50 = space();
 				label3 = element("label");
 				label3.textContent = "Email";
-				t48 = space();
+				t52 = space();
 				input9 = element("input");
-				t49 = space();
+				t53 = space();
 				label4 = element("label");
 				label4.textContent = "Phone";
-				t51 = space();
-				div = element("div");
+				t55 = space();
+				div2 = element("div");
 				zoo_button = element("zoo-button");
 				span = element("span");
 				span.textContent = "Trigger invalid state!";
@@ -1090,15 +1100,31 @@
 				attr(tr4, "slot", "row");
 				attr(tr4, "disabled", "");
 				add_location(tr4, file$2, 10, 1, 493);
-				td8.colSpan = "1000";
-				add_location(td8, file$2, 12, 2, 593);
+				add_location(div0, file$2, 12, 2, 593);
+				option0.__value = "5";
+				option0.value = option0.__value;
+				add_location(option0, file$2, 16, 5, 767);
+				option1.__value = "10";
+				option1.value = option1.__value;
+				add_location(option1, file$2, 17, 5, 792);
+				option2.__value = "15";
+				option2.value = option2.__value;
+				add_location(option2, file$2, 18, 5, 818);
+				attr(select0, "type", "number");
+				attr(select0, "slot", "selectelement");
+				add_location(select0, file$2, 15, 4, 717);
+				set_custom_element_data(zoo_select0, "labelposition", "left");
+				set_custom_element_data(zoo_select0, "labeltext", "Page size:");
+				add_location(zoo_select0, file$2, 14, 3, 655);
+				set_style(div1, "width", "100px");
+				add_location(div1, file$2, 13, 2, 624);
 				attr(tr5, "slot", "footer");
 				add_location(tr5, file$2, 11, 1, 571);
 				add_location(zoo_grid, file$2, 2, 0, 177);
 				attr(input0, "slot", "inputelement");
 				attr(input0, "type", "text");
 				input0.placeholder = "input";
-				add_location(input0, file$2, 19, 2, 1016);
+				add_location(input0, file$2, 27, 2, 1163);
 				set_custom_element_data(zoo_input0, "labeltext", "Input type text");
 				set_custom_element_data(zoo_input0, "linktext", "Forgotten your password?");
 				set_custom_element_data(zoo_input0, "linkhref", "https://google.com");
@@ -1106,161 +1132,161 @@
 				set_custom_element_data(zoo_input0, "valid", ctx.inputState);
 				set_custom_element_data(zoo_input0, "inputerrormsg", "invalid");
 				set_custom_element_data(zoo_input0, "infotext", "Additional helpful information for our users");
-				add_location(zoo_input0, file$2, 17, 1, 778);
+				add_location(zoo_input0, file$2, 25, 1, 925);
 				attr(input1, "slot", "inputelement");
 				attr(input1, "type", "number");
 				input1.placeholder = "input";
-				add_location(input1, file$2, 23, 2, 1290);
+				add_location(input1, file$2, 31, 2, 1437);
 				set_custom_element_data(zoo_input1, "labeltext", "Input type number");
 				set_custom_element_data(zoo_input1, "linktext", "Forgotten your password?");
 				set_custom_element_data(zoo_input1, "linkhref", "https://google.com");
 				set_custom_element_data(zoo_input1, "linktarget", "about:blank");
 				set_custom_element_data(zoo_input1, "infotext", "Additional helpful information for our users");
-				add_location(zoo_input1, file$2, 21, 1, 1095);
+				add_location(zoo_input1, file$2, 29, 1, 1242);
 				attr(input2, "slot", "inputelement");
 				attr(input2, "type", "date");
 				input2.placeholder = "Enter date";
-				add_location(input2, file$2, 27, 2, 1619);
+				add_location(input2, file$2, 35, 2, 1766);
 				set_custom_element_data(zoo_input2, "labeltext", "This input has type date");
 				set_custom_element_data(zoo_input2, "linktext", "Native date picker -> click me");
 				set_custom_element_data(zoo_input2, "linkhref", "https://github.com/jcgertig/date-input-polyfill");
 				set_custom_element_data(zoo_input2, "linktarget", "about:blank");
 				set_custom_element_data(zoo_input2, "infotext", "Click on input to show context menu with date selection");
-				add_location(zoo_input2, file$2, 25, 1, 1371);
+				add_location(zoo_input2, file$2, 33, 1, 1518);
 				attr(input3, "slot", "inputelement");
 				attr(input3, "type", "time");
 				input3.placeholder = "Enter time";
-				add_location(input3, file$2, 30, 2, 1778);
+				add_location(input3, file$2, 38, 2, 1925);
 				set_custom_element_data(zoo_input3, "labeltext", "This input has type time");
 				set_custom_element_data(zoo_input3, "infotext", "Select time");
-				add_location(zoo_input3, file$2, 29, 1, 1703);
+				add_location(zoo_input3, file$2, 37, 1, 1850);
 				attr(textarea, "slot", "inputelement");
 				textarea.placeholder = "Textarea";
-				add_location(textarea, file$2, 33, 2, 1927);
+				add_location(textarea, file$2, 41, 2, 2074);
 				set_custom_element_data(zoo_input4, "labeltext", "Textarea example");
 				set_custom_element_data(zoo_input4, "valid", ctx.inputState);
-				add_location(zoo_input4, file$2, 32, 1, 1862);
-				option0.className = "placeholder";
-				option0.__value = "";
-				option0.value = option0.__value;
-				option0.disabled = true;
-				option0.selected = true;
-				add_location(option0, file$2, 37, 3, 2203);
-				option1.__value = "1";
-				option1.value = option1.__value;
-				add_location(option1, file$2, 38, 3, 2283);
-				option2.__value = "2";
-				option2.value = option2.__value;
-				add_location(option2, file$2, 39, 3, 2306);
-				option3.__value = "3";
+				add_location(zoo_input4, file$2, 40, 1, 2009);
+				option3.className = "placeholder";
+				option3.__value = "";
 				option3.value = option3.__value;
-				add_location(option3, file$2, 40, 3, 2329);
-				attr(select0, "slot", "selectelement");
-				select0.multiple = true;
-				add_location(select0, file$2, 36, 2, 2160);
-				set_custom_element_data(zoo_select0, "labeltext", "Multiselect");
-				set_custom_element_data(zoo_select0, "valid", ctx.inputState);
-				set_custom_element_data(zoo_select0, "inputerrormsg", "Value is required");
-				set_custom_element_data(zoo_select0, "infotext", "Additional helpful information for our users");
-				add_location(zoo_select0, file$2, 35, 1, 2009);
-				option4.className = "placeholder";
-				option4.__value = "";
+				option3.disabled = true;
+				option3.selected = true;
+				add_location(option3, file$2, 45, 3, 2350);
+				option4.__value = "1";
 				option4.value = option4.__value;
-				option4.disabled = true;
-				option4.selected = true;
-				add_location(option4, file$2, 45, 3, 2568);
-				option5.__value = "1";
+				add_location(option4, file$2, 46, 3, 2430);
+				option5.__value = "2";
 				option5.value = option5.__value;
-				add_location(option5, file$2, 46, 3, 2648);
-				option6.__value = "2";
+				add_location(option5, file$2, 47, 3, 2453);
+				option6.__value = "3";
 				option6.value = option6.__value;
-				add_location(option6, file$2, 47, 3, 2671);
-				option7.__value = "3";
-				option7.value = option7.__value;
-				add_location(option7, file$2, 48, 3, 2694);
+				add_location(option6, file$2, 48, 3, 2476);
 				attr(select1, "slot", "selectelement");
-				add_location(select1, file$2, 44, 2, 2534);
-				set_custom_element_data(zoo_select1, "labeltext", "Standard select");
+				select1.multiple = true;
+				add_location(select1, file$2, 44, 2, 2307);
+				set_custom_element_data(zoo_select1, "labeltext", "Multiselect");
 				set_custom_element_data(zoo_select1, "valid", ctx.inputState);
 				set_custom_element_data(zoo_select1, "inputerrormsg", "Value is required");
 				set_custom_element_data(zoo_select1, "infotext", "Additional helpful information for our users");
-				add_location(zoo_select1, file$2, 43, 1, 2379);
-				select2.multiple = true;
+				add_location(zoo_select1, file$2, 43, 1, 2156);
+				option7.className = "placeholder";
+				option7.__value = "";
+				option7.value = option7.__value;
+				option7.disabled = true;
+				option7.selected = true;
+				add_location(option7, file$2, 53, 3, 2715);
+				option8.__value = "1";
+				option8.value = option8.__value;
+				add_location(option8, file$2, 54, 3, 2795);
+				option9.__value = "2";
+				option9.value = option9.__value;
+				add_location(option9, file$2, 55, 3, 2818);
+				option10.__value = "3";
+				option10.value = option10.__value;
+				add_location(option10, file$2, 56, 3, 2841);
 				attr(select2, "slot", "selectelement");
-				add_location(select2, file$2, 52, 2, 2914);
+				add_location(select2, file$2, 52, 2, 2681);
+				set_custom_element_data(zoo_select2, "labeltext", "Standard select");
+				set_custom_element_data(zoo_select2, "valid", ctx.inputState);
+				set_custom_element_data(zoo_select2, "inputerrormsg", "Value is required");
+				set_custom_element_data(zoo_select2, "infotext", "Additional helpful information for our users");
+				add_location(zoo_select2, file$2, 51, 1, 2526);
+				select3.multiple = true;
+				attr(select3, "slot", "selectelement");
+				add_location(select3, file$2, 60, 2, 3061);
 				set_custom_element_data(zoo_searchable_select0, "labeltext", "Searchable multiple select");
 				set_custom_element_data(zoo_searchable_select0, "placeholder", "Placeholder");
 				set_custom_element_data(zoo_searchable_select0, "infotext", "Additional helpful information for our users which is a long text.");
-				add_location(zoo_searchable_select0, file$2, 51, 1, 2744);
-				attr(select3, "slot", "selectelement");
-				add_location(select3, file$2, 61, 2, 3246);
+				add_location(zoo_searchable_select0, file$2, 59, 1, 2891);
+				attr(select4, "slot", "selectelement");
+				add_location(select4, file$2, 69, 2, 3393);
 				set_custom_element_data(zoo_searchable_select1, "labeltext", "Searchable select");
 				set_custom_element_data(zoo_searchable_select1, "placeholder", "Placeholder");
 				set_custom_element_data(zoo_searchable_select1, "infotext", "Additional helpful information for our users.");
-				add_location(zoo_searchable_select1, file$2, 60, 1, 3106);
+				add_location(zoo_searchable_select1, file$2, 68, 1, 3253);
 				attr(input4, "slot", "checkboxelement");
 				attr(input4, "type", "checkbox");
-				add_location(input4, file$2, 70, 2, 3574);
+				add_location(input4, file$2, 78, 2, 3721);
 				set_custom_element_data(zoo_checkbox, "highlighted", true);
 				set_custom_element_data(zoo_checkbox, "valid", ctx.inputState);
 				set_custom_element_data(zoo_checkbox, "labeltext", "An example checkbox with some additional event handling of clicks inside");
-				add_location(zoo_checkbox, file$2, 69, 1, 3429);
+				add_location(zoo_checkbox, file$2, 77, 1, 3576);
 				attr(input5, "type", "radio");
 				input5.id = "contactChoice1";
 				input5.name = "contact";
 				input5.value = "email";
 				input5.disabled = true;
-				add_location(input5, file$2, 74, 3, 3734);
+				add_location(input5, file$2, 82, 3, 3881);
 				label0.htmlFor = "contactChoice1";
-				add_location(label0, file$2, 75, 3, 3817);
+				add_location(label0, file$2, 83, 3, 3964);
 				attr(input6, "type", "radio");
 				input6.id = "contactChoice2";
 				input6.name = "contact";
 				input6.value = "phone";
-				add_location(input6, file$2, 76, 3, 3863);
+				add_location(input6, file$2, 84, 3, 4010);
 				label1.htmlFor = "contactChoice2";
-				add_location(label1, file$2, 77, 3, 3937);
+				add_location(label1, file$2, 85, 3, 4084);
 				attr(input7, "type", "radio");
 				input7.id = "contactChoice3";
 				input7.name = "contact";
 				input7.value = "mail";
-				add_location(input7, file$2, 78, 3, 3983);
+				add_location(input7, file$2, 86, 3, 4130);
 				label2.htmlFor = "contactChoice3";
-				add_location(label2, file$2, 79, 3, 4056);
-				add_location(template, file$2, 73, 2, 3719);
+				add_location(label2, file$2, 87, 3, 4203);
+				add_location(template, file$2, 81, 2, 3866);
 				set_custom_element_data(zoo_radio0, "valid", ctx.inputState);
 				set_custom_element_data(zoo_radio0, "errormsg", "errormsg");
 				set_custom_element_data(zoo_radio0, "infotext", "infotext");
-				add_location(zoo_radio0, file$2, 72, 1, 3643);
+				add_location(zoo_radio0, file$2, 80, 1, 3790);
 				attr(input8, "type", "radio");
 				input8.id = "contactChoice4";
 				input8.name = "contact";
 				input8.value = "email";
 				input8.disabled = true;
-				add_location(input8, file$2, 84, 2, 4207);
+				add_location(input8, file$2, 92, 2, 4354);
 				label3.htmlFor = "contactChoice4";
-				add_location(label3, file$2, 85, 2, 4289);
+				add_location(label3, file$2, 93, 2, 4436);
 				attr(input9, "type", "radio");
 				input9.id = "contactChoice5";
 				input9.name = "contact";
 				input9.value = "phone";
-				add_location(input9, file$2, 86, 2, 4334);
+				add_location(input9, file$2, 94, 2, 4481);
 				label4.htmlFor = "contactChoice5";
-				add_location(label4, file$2, 87, 2, 4407);
+				add_location(label4, file$2, 95, 2, 4554);
 				set_custom_element_data(zoo_radio1, "valid", ctx.inputState);
 				set_custom_element_data(zoo_radio1, "errormsg", "errormsg");
 				set_custom_element_data(zoo_radio1, "infotext", "infotext");
-				add_location(zoo_radio1, file$2, 83, 1, 4131);
+				add_location(zoo_radio1, file$2, 91, 1, 4278);
 				form.className = "form";
-				add_location(form, file$2, 16, 0, 756);
+				add_location(form, file$2, 24, 0, 903);
 				attr(span, "slot", "buttoncontent");
 				span.className = "slotted-span";
-				add_location(span, file$2, 92, 2, 4563);
+				add_location(span, file$2, 100, 2, 4710);
 				set_custom_element_data(zoo_button, "type", "hot");
 				set_custom_element_data(zoo_button, "size", "medium");
-				add_location(zoo_button, file$2, 91, 1, 4497);
-				div.className = "submit";
-				add_location(div, file$2, 90, 0, 4474);
+				add_location(zoo_button, file$2, 99, 1, 4644);
+				div2.className = "submit";
+				add_location(div2, file$2, 98, 0, 4621);
 				dispose = listen(zoo_button, "click", ctx.changeState);
 			},
 
@@ -1294,82 +1320,89 @@
 				append(tr4, td7);
 				append(zoo_grid, t16);
 				append(zoo_grid, tr5);
-				append(tr5, td8);
-				insert(target, t18, anchor);
-				insert(target, form, anchor);
-				append(form, zoo_input0);
-				append(zoo_input0, input0);
-				append(form, t19);
-				append(form, zoo_input1);
-				append(zoo_input1, input1);
-				append(form, t20);
-				append(form, zoo_input2);
-				append(zoo_input2, input2);
-				append(form, t21);
-				append(form, zoo_input3);
-				append(zoo_input3, input3);
-				append(form, t22);
-				append(form, zoo_input4);
-				append(zoo_input4, textarea);
-				append(form, t23);
-				append(form, zoo_select0);
+				append(tr5, div0);
+				append(tr5, t18);
+				append(tr5, div1);
+				append(div1, zoo_select0);
 				append(zoo_select0, select0);
 				append(select0, option0);
 				append(select0, option1);
 				append(select0, option2);
-				append(select0, option3);
-				append(form, t28);
+				insert(target, t22, anchor);
+				insert(target, form, anchor);
+				append(form, zoo_input0);
+				append(zoo_input0, input0);
+				append(form, t23);
+				append(form, zoo_input1);
+				append(zoo_input1, input1);
+				append(form, t24);
+				append(form, zoo_input2);
+				append(zoo_input2, input2);
+				append(form, t25);
+				append(form, zoo_input3);
+				append(zoo_input3, input3);
+				append(form, t26);
+				append(form, zoo_input4);
+				append(zoo_input4, textarea);
+				append(form, t27);
 				append(form, zoo_select1);
 				append(zoo_select1, select1);
+				append(select1, option3);
 				append(select1, option4);
 				append(select1, option5);
 				append(select1, option6);
-				append(select1, option7);
-				append(form, t33);
+				append(form, t32);
+				append(form, zoo_select2);
+				append(zoo_select2, select2);
+				append(select2, option7);
+				append(select2, option8);
+				append(select2, option9);
+				append(select2, option10);
+				append(form, t37);
 				append(form, zoo_searchable_select0);
-				append(zoo_searchable_select0, select2);
+				append(zoo_searchable_select0, select3);
 
 				for (var i = 0; i < each_blocks_1.length; i += 1) {
-					each_blocks_1[i].m(select2, null);
+					each_blocks_1[i].m(select3, null);
 				}
 
-				append(form, t34);
+				append(form, t38);
 				append(form, zoo_searchable_select1);
-				append(zoo_searchable_select1, select3);
+				append(zoo_searchable_select1, select4);
 
 				for (var i = 0; i < each_blocks.length; i += 1) {
-					each_blocks[i].m(select3, null);
+					each_blocks[i].m(select4, null);
 				}
 
-				append(form, t35);
+				append(form, t39);
 				append(form, zoo_checkbox);
 				append(zoo_checkbox, input4);
-				append(form, t36);
+				append(form, t40);
 				append(form, zoo_radio0);
 				append(zoo_radio0, template);
 				append(template.content, input5);
-				append(template.content, t37);
+				append(template.content, t41);
 				append(template.content, label0);
-				append(template.content, t39);
-				append(template.content, input6);
-				append(template.content, t40);
-				append(template.content, label1);
-				append(template.content, t42);
-				append(template.content, input7);
 				append(template.content, t43);
+				append(template.content, input6);
+				append(template.content, t44);
+				append(template.content, label1);
+				append(template.content, t46);
+				append(template.content, input7);
+				append(template.content, t47);
 				append(template.content, label2);
-				append(form, t45);
+				append(form, t49);
 				append(form, zoo_radio1);
 				append(zoo_radio1, input8);
-				append(zoo_radio1, t46);
+				append(zoo_radio1, t50);
 				append(zoo_radio1, label3);
-				append(zoo_radio1, t48);
+				append(zoo_radio1, t52);
 				append(zoo_radio1, input9);
-				append(zoo_radio1, t49);
+				append(zoo_radio1, t53);
 				append(zoo_radio1, label4);
-				insert(target, t51, anchor);
-				insert(target, div, anchor);
-				append(div, zoo_button);
+				insert(target, t55, anchor);
+				insert(target, div2, anchor);
+				append(div2, zoo_button);
 				append(zoo_button, span);
 			},
 
@@ -1377,8 +1410,8 @@
 				if (changed.inputState) {
 					set_custom_element_data(zoo_input0, "valid", ctx.inputState);
 					set_custom_element_data(zoo_input4, "valid", ctx.inputState);
-					set_custom_element_data(zoo_select0, "valid", ctx.inputState);
 					set_custom_element_data(zoo_select1, "valid", ctx.inputState);
+					set_custom_element_data(zoo_select2, "valid", ctx.inputState);
 				}
 
 				if (changed.options) {
@@ -1392,7 +1425,7 @@
 						} else {
 							each_blocks_1[i] = create_each_block_1(child_ctx);
 							each_blocks_1[i].c();
-							each_blocks_1[i].m(select2, null);
+							each_blocks_1[i].m(select3, null);
 						}
 					}
 
@@ -1413,7 +1446,7 @@
 						} else {
 							each_blocks[i] = create_each_block$1(child_ctx);
 							each_blocks[i].c();
-							each_blocks[i].m(select3, null);
+							each_blocks[i].m(select4, null);
 						}
 					}
 
@@ -1438,7 +1471,7 @@
 					detach(app_context);
 					detach(t0);
 					detach(zoo_grid);
-					detach(t18);
+					detach(t22);
 					detach(form);
 				}
 
@@ -1447,8 +1480,8 @@
 				destroy_each(each_blocks, detaching);
 
 				if (detaching) {
-					detach(t51);
-					detach(div);
+					detach(t55);
+					detach(div2);
 				}
 
 				dispose();
@@ -1488,7 +1521,7 @@
 			super();
 
 			this.shadowRoot.innerHTML = `<style>.form{flex:1 0 auto;margin:20px auto;display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));grid-template-rows:120px 150px 120px 70px;grid-gap:20px}@media only screen and (max-width: 544px){.form{width:300px;grid-template-columns:auto}}@media only screen and (max-width: 812px){.form{grid-template-rows:120px 150px 120px 120px}}.submit{width:250px;height:50px;margin:0 auto}
-		/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRm9ybS5zdmVsdGUiLCJzb3VyY2VzIjpbIkZvcm0uc3ZlbHRlIl0sInNvdXJjZXNDb250ZW50IjpbIjxzdmVsdGU6b3B0aW9ucyB0YWc9XCJhcHAtZm9ybVwiPjwvc3ZlbHRlOm9wdGlvbnM+XHJcbjxhcHAtY29udGV4dCB0ZXh0PVwiRmlyc3Qgc2VjdGlvbiBpcyBhIHNob3djYXNlIG9mIGRpZmZlcmVudCBmb3JtIGVsZW1lbnRzIGxpa2UgYGlucHV0YCwgYHRleHRhcmVhYCwgYHNlbGVjdGAuXCI+PC9hcHAtY29udGV4dD5cclxuPHpvby1ncmlkPlxyXG5cdDx0ciBzbG90PVwiaGVhZGVyXCI+XHJcblx0XHQ8dGg+SGVhZGVyIHRleHQgY29udGVudDwvdGg+XHJcblx0XHQ8dGg+SGVhZGVyIG51bWVyaWMgY29udGVudDwvdGg+XHJcblx0PC90cj5cclxuXHQ8dHIgc2xvdD1cInJvd1wiPjx0ZD5Cb2R5IGNvbnRlbnQgMTwvdGQ+PHRkPkJvZHkgY29udGVudCAyPC90ZD48L3RyPlxyXG5cdDx0ciBzbG90PVwicm93XCI+PHRkPkJvZHkgY29udGVudCAzPC90ZD48dGQ+Qm9keSBjb250ZW50IDQ8L3RkPjwvdHI+XHJcblx0PHRyIHNsb3Q9XCJyb3dcIj48dGQ+Qm9keSBjb250ZW50IDU8L3RkPjx0ZD5Cb2R5IGNvbnRlbnQgNjwvdGQ+PC90cj5cclxuXHQ8dHIgc2xvdD1cInJvd1wiIGRpc2FibGVkPjx0ZD5Cb2R5IGNvbnRlbnQgNzwvdGQ+PHRkPkJvZHkgY29udGVudCA4PC90ZD48L3RyPlxyXG5cdDx0ciBzbG90PVwiZm9vdGVyXCI+XHJcblx0XHQ8dGQgY29sc3Bhbj1cIjEwMDBcIj5Gb290ZXIgY29udGVudCB3aGljaCBpcyBzcGFubmVkIGFjcm9zcyBtYXhpbXVtIG51bWJlciBvZiBjb2x1bW5zIHdoaWNoIGlzIDEwMDA8L3RkPlxyXG5cdFx0PCEtLSA8dGQ+Rm9vdGVyIGNvbnRlbnQgMjwvdGQ+IC0tPlxyXG5cdDwvdHI+XHJcbjwvem9vLWdyaWQ+XHJcbjxmb3JtIGNsYXNzPVwiZm9ybVwiPlxyXG5cdDx6b28taW5wdXQgbGFiZWx0ZXh0PVwiSW5wdXQgdHlwZSB0ZXh0XCIgbGlua3RleHQ9XCJGb3Jnb3R0ZW4geW91ciBwYXNzd29yZD9cIiBsaW5raHJlZj1cImh0dHBzOi8vZ29vZ2xlLmNvbVwiIGxpbmt0YXJnZXQ9XCJhYm91dDpibGFua1wiXHJcblx0IHZhbGlkPVwie2lucHV0U3RhdGV9XCIgaW5wdXRlcnJvcm1zZz1cImludmFsaWRcIiBpbmZvdGV4dD1cIkFkZGl0aW9uYWwgaGVscGZ1bCBpbmZvcm1hdGlvbiBmb3Igb3VyIHVzZXJzXCI+XHJcblx0XHQ8aW5wdXQgc2xvdD1cImlucHV0ZWxlbWVudFwiIHR5cGU9XCJ0ZXh0XCIgcGxhY2Vob2xkZXI9XCJpbnB1dFwiIC8+XHJcblx0PC96b28taW5wdXQ+XHJcblx0PHpvby1pbnB1dCBsYWJlbHRleHQ9XCJJbnB1dCB0eXBlIG51bWJlclwiIGxpbmt0ZXh0PVwiRm9yZ290dGVuIHlvdXIgcGFzc3dvcmQ/XCIgbGlua2hyZWY9XCJodHRwczovL2dvb2dsZS5jb21cIiBsaW5rdGFyZ2V0PVwiYWJvdXQ6YmxhbmtcIlxyXG5cdCBpbmZvdGV4dD1cIkFkZGl0aW9uYWwgaGVscGZ1bCBpbmZvcm1hdGlvbiBmb3Igb3VyIHVzZXJzXCI+XHJcblx0XHQ8aW5wdXQgc2xvdD1cImlucHV0ZWxlbWVudFwiIHR5cGU9XCJudW1iZXJcIiBwbGFjZWhvbGRlcj1cImlucHV0XCIgLz5cclxuXHQ8L3pvby1pbnB1dD5cclxuXHQ8em9vLWlucHV0IGxhYmVsdGV4dD1cIlRoaXMgaW5wdXQgaGFzIHR5cGUgZGF0ZVwiIGxpbmt0ZXh0PVwiTmF0aXZlIGRhdGUgcGlja2VyIC0+IGNsaWNrIG1lXCIgbGlua2hyZWY9XCJodHRwczovL2dpdGh1Yi5jb20vamNnZXJ0aWcvZGF0ZS1pbnB1dC1wb2x5ZmlsbFwiXHJcblx0IGxpbmt0YXJnZXQ9XCJhYm91dDpibGFua1wiIGluZm90ZXh0PVwiQ2xpY2sgb24gaW5wdXQgdG8gc2hvdyBjb250ZXh0IG1lbnUgd2l0aCBkYXRlIHNlbGVjdGlvblwiPlxyXG5cdFx0PGlucHV0IHNsb3Q9XCJpbnB1dGVsZW1lbnRcIiB0eXBlPVwiZGF0ZVwiIHBsYWNlaG9sZGVyPVwiRW50ZXIgZGF0ZVwiIC8+XHJcblx0PC96b28taW5wdXQ+XHJcblx0PHpvby1pbnB1dCBsYWJlbHRleHQ9XCJUaGlzIGlucHV0IGhhcyB0eXBlIHRpbWVcIiBpbmZvdGV4dD1cIlNlbGVjdCB0aW1lXCI+XHJcblx0XHQ8aW5wdXQgc2xvdD1cImlucHV0ZWxlbWVudFwiIHR5cGU9XCJ0aW1lXCIgcGxhY2Vob2xkZXI9XCJFbnRlciB0aW1lXCIgLz5cclxuXHQ8L3pvby1pbnB1dD5cclxuXHQ8em9vLWlucHV0IGxhYmVsdGV4dD1cIlRleHRhcmVhIGV4YW1wbGVcIiB2YWxpZD1cIntpbnB1dFN0YXRlfVwiPlxyXG5cdFx0PHRleHRhcmVhIHNsb3Q9XCJpbnB1dGVsZW1lbnRcIiBwbGFjZWhvbGRlcj1cIlRleHRhcmVhXCI+PC90ZXh0YXJlYT5cclxuXHQ8L3pvby1pbnB1dD5cclxuXHQ8em9vLXNlbGVjdCBsYWJlbHRleHQ9XCJNdWx0aXNlbGVjdFwiIHZhbGlkPVwie2lucHV0U3RhdGV9XCIgaW5wdXRlcnJvcm1zZz1cIlZhbHVlIGlzIHJlcXVpcmVkXCIgaW5mb3RleHQ9XCJBZGRpdGlvbmFsIGhlbHBmdWwgaW5mb3JtYXRpb24gZm9yIG91ciB1c2Vyc1wiPlxyXG5cdFx0PHNlbGVjdCBzbG90PVwic2VsZWN0ZWxlbWVudFwiIG11bHRpcGxlPlxyXG5cdFx0XHQ8b3B0aW9uIGNsYXNzPVwicGxhY2Vob2xkZXJcIiB2YWx1ZT1cIlwiIGRpc2FibGVkIHNlbGVjdGVkPlBsYWNlaG9sZGVyPC9vcHRpb24+XHJcblx0XHRcdDxvcHRpb24+MTwvb3B0aW9uPlxyXG5cdFx0XHQ8b3B0aW9uPjI8L29wdGlvbj5cclxuXHRcdFx0PG9wdGlvbj4zPC9vcHRpb24+XHJcblx0XHQ8L3NlbGVjdD5cclxuXHQ8L3pvby1zZWxlY3Q+XHJcblx0PHpvby1zZWxlY3QgbGFiZWx0ZXh0PVwiU3RhbmRhcmQgc2VsZWN0XCIgdmFsaWQ9XCJ7aW5wdXRTdGF0ZX1cIiBpbnB1dGVycm9ybXNnPVwiVmFsdWUgaXMgcmVxdWlyZWRcIiBpbmZvdGV4dD1cIkFkZGl0aW9uYWwgaGVscGZ1bCBpbmZvcm1hdGlvbiBmb3Igb3VyIHVzZXJzXCI+XHJcblx0XHQ8c2VsZWN0IHNsb3Q9XCJzZWxlY3RlbGVtZW50XCI+XHJcblx0XHRcdDxvcHRpb24gY2xhc3M9XCJwbGFjZWhvbGRlclwiIHZhbHVlPVwiXCIgZGlzYWJsZWQgc2VsZWN0ZWQ+UGxhY2Vob2xkZXI8L29wdGlvbj5cclxuXHRcdFx0PG9wdGlvbj4xPC9vcHRpb24+XHJcblx0XHRcdDxvcHRpb24+Mjwvb3B0aW9uPlxyXG5cdFx0XHQ8b3B0aW9uPjM8L29wdGlvbj5cclxuXHRcdDwvc2VsZWN0PlxyXG5cdDwvem9vLXNlbGVjdD5cclxuXHQ8em9vLXNlYXJjaGFibGUtc2VsZWN0IGxhYmVsdGV4dD1cIlNlYXJjaGFibGUgbXVsdGlwbGUgc2VsZWN0XCIgcGxhY2Vob2xkZXI9XCJQbGFjZWhvbGRlclwiIGluZm90ZXh0PVwiQWRkaXRpb25hbCBoZWxwZnVsIGluZm9ybWF0aW9uIGZvciBvdXIgdXNlcnMgd2hpY2ggaXMgYSBsb25nIHRleHQuXCI+XHJcblx0XHQ8c2VsZWN0IG11bHRpcGxlIHNsb3Q9XCJzZWxlY3RlbGVtZW50XCI+XHJcblx0XHRcdHsjZWFjaCBvcHRpb25zIGFzIG9wdGlvbn1cclxuXHRcdFx0PG9wdGlvbiB2YWx1ZT1cIntvcHRpb24udmFsdWV9XCI+XHJcblx0XHRcdFx0e29wdGlvbi50ZXh0fVxyXG5cdFx0XHQ8L29wdGlvbj5cclxuXHRcdFx0ey9lYWNofVxyXG5cdFx0PC9zZWxlY3Q+XHJcblx0PC96b28tc2VhcmNoYWJsZS1zZWxlY3Q+XHJcblx0PHpvby1zZWFyY2hhYmxlLXNlbGVjdCBsYWJlbHRleHQ9XCJTZWFyY2hhYmxlIHNlbGVjdFwiIHBsYWNlaG9sZGVyPVwiUGxhY2Vob2xkZXJcIiBpbmZvdGV4dD1cIkFkZGl0aW9uYWwgaGVscGZ1bCBpbmZvcm1hdGlvbiBmb3Igb3VyIHVzZXJzLlwiPlxyXG5cdFx0PHNlbGVjdCBzbG90PVwic2VsZWN0ZWxlbWVudFwiPlxyXG5cdFx0XHR7I2VhY2ggb3B0aW9ucyBhcyBvcHRpb259XHJcblx0XHRcdDxvcHRpb24gdmFsdWU9XCJ7b3B0aW9uLnZhbHVlfVwiPlxyXG5cdFx0XHRcdHtvcHRpb24udGV4dH1cclxuXHRcdFx0PC9vcHRpb24+XHJcblx0XHRcdHsvZWFjaH1cclxuXHRcdDwvc2VsZWN0PlxyXG5cdDwvem9vLXNlYXJjaGFibGUtc2VsZWN0PlxyXG5cdDx6b28tY2hlY2tib3ggaGlnaGxpZ2h0ZWQ9XCJ7dHJ1ZX1cIiB2YWxpZD1cIntpbnB1dFN0YXRlfVwiIGxhYmVsdGV4dD1cIkFuIGV4YW1wbGUgY2hlY2tib3ggd2l0aCBzb21lIGFkZGl0aW9uYWwgZXZlbnQgaGFuZGxpbmcgb2YgY2xpY2tzIGluc2lkZVwiPlxyXG5cdFx0PGlucHV0IHNsb3Q9XCJjaGVja2JveGVsZW1lbnRcIiB0eXBlPVwiY2hlY2tib3hcIiAvPlxyXG5cdDwvem9vLWNoZWNrYm94PlxyXG5cdDx6b28tcmFkaW8gdmFsaWQ9XCJ7aW5wdXRTdGF0ZX1cIiBlcnJvcm1zZz1cImVycm9ybXNnXCIgaW5mb3RleHQ9XCJpbmZvdGV4dFwiPlxyXG5cdFx0PHRlbXBsYXRlPlxyXG5cdFx0XHQ8aW5wdXQgdHlwZT1cInJhZGlvXCIgaWQ9XCJjb250YWN0Q2hvaWNlMVwiIG5hbWU9XCJjb250YWN0XCIgdmFsdWU9XCJlbWFpbFwiIGRpc2FibGVkPlxyXG5cdFx0XHQ8bGFiZWwgZm9yPVwiY29udGFjdENob2ljZTFcIj5FbWFpbDwvbGFiZWw+XHJcblx0XHRcdDxpbnB1dCB0eXBlPVwicmFkaW9cIiBpZD1cImNvbnRhY3RDaG9pY2UyXCIgbmFtZT1cImNvbnRhY3RcIiB2YWx1ZT1cInBob25lXCI+XHJcblx0XHRcdDxsYWJlbCBmb3I9XCJjb250YWN0Q2hvaWNlMlwiPlBob25lPC9sYWJlbD5cclxuXHRcdFx0PGlucHV0IHR5cGU9XCJyYWRpb1wiIGlkPVwiY29udGFjdENob2ljZTNcIiBuYW1lPVwiY29udGFjdFwiIHZhbHVlPVwibWFpbFwiPlxyXG5cdFx0XHQ8bGFiZWwgZm9yPVwiY29udGFjdENob2ljZTNcIj5NYWlsPC9sYWJlbD5cclxuXHRcdDwvdGVtcGxhdGU+XHJcblx0PC96b28tcmFkaW8+XHJcblxyXG5cdDx6b28tcmFkaW8gdmFsaWQ9XCJ7aW5wdXRTdGF0ZX1cIiBlcnJvcm1zZz1cImVycm9ybXNnXCIgaW5mb3RleHQ9XCJpbmZvdGV4dFwiPlxyXG5cdFx0PGlucHV0IHR5cGU9XCJyYWRpb1wiIGlkPVwiY29udGFjdENob2ljZTRcIiBuYW1lPVwiY29udGFjdFwiIHZhbHVlPVwiZW1haWxcIiBkaXNhYmxlZD5cclxuXHRcdDxsYWJlbCBmb3I9XCJjb250YWN0Q2hvaWNlNFwiPkVtYWlsPC9sYWJlbD5cclxuXHRcdDxpbnB1dCB0eXBlPVwicmFkaW9cIiBpZD1cImNvbnRhY3RDaG9pY2U1XCIgbmFtZT1cImNvbnRhY3RcIiB2YWx1ZT1cInBob25lXCI+XHJcblx0XHQ8bGFiZWwgZm9yPVwiY29udGFjdENob2ljZTVcIj5QaG9uZTwvbGFiZWw+XHJcblx0PC96b28tcmFkaW8+XHJcbjwvZm9ybT5cclxuPGRpdiBjbGFzcz1cInN1Ym1pdFwiPlxyXG5cdDx6b28tYnV0dG9uIHR5cGU9XCJob3RcIiBzaXplPVwibWVkaXVtXCIgb246Y2xpY2s9XCJ7Y2hhbmdlU3RhdGV9XCI+XHJcblx0XHQ8c3BhbiBzbG90PVwiYnV0dG9uY29udGVudFwiIGNsYXNzPVwic2xvdHRlZC1zcGFuXCI+VHJpZ2dlciBpbnZhbGlkIHN0YXRlITwvc3Bhbj5cclxuXHQ8L3pvby1idXR0b24+XHJcbjwvZGl2PlxyXG5cclxuPHN0eWxlIHR5cGU9J3RleHQvc2Nzcyc+LmZvcm0ge1xuICBmbGV4OiAxIDAgYXV0bztcbiAgbWFyZ2luOiAyMHB4IGF1dG87XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KGF1dG8tZmlsbCwgbWlubWF4KDMyMHB4LCAxZnIpKTtcbiAgZ3JpZC10ZW1wbGF0ZS1yb3dzOiAxMjBweCAxNTBweCAxMjBweCA3MHB4O1xuICBncmlkLWdhcDogMjBweDsgfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU0NHB4KSB7XG4gICAgLmZvcm0ge1xuICAgICAgd2lkdGg6IDMwMHB4O1xuICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBhdXRvOyB9IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA4MTJweCkge1xuICAgIC5mb3JtIHtcbiAgICAgIGdyaWQtdGVtcGxhdGUtcm93czogMTIwcHggMTUwcHggMTIwcHggMTIwcHg7IH0gfVxuXG4uc3VibWl0IHtcbiAgd2lkdGg6IDI1MHB4O1xuICBoZWlnaHQ6IDUwcHg7XG4gIG1hcmdpbjogMCBhdXRvOyB9XG5cbi8qIyBzb3VyY2VNYXBwaW5nVVJMPXgubWFwICovPC9zdHlsZT5cclxuXHJcbjxzY3JpcHQ+XHJcblx0bGV0IG9wdGlvbnMgPSBbXHJcblx0XHR7XHJcblx0XHRcdHRleHQ6ICd0ZXh0JyxcclxuXHRcdFx0dmFsdWU6ICd2YWx1ZSdcclxuXHRcdH0sXHJcblx0XHR7XHJcblx0XHRcdHRleHQ6ICdyYU5kT20nLFxyXG5cdFx0XHR2YWx1ZTogJ3JhbmRvbSdcclxuXHRcdH0sXHJcblx0XHR7XHJcblx0XHRcdHRleHQ6ICdyYW5kb20xJyxcclxuXHRcdFx0dmFsdWU6ICdyYW5kb20xJ1xyXG5cdFx0fSxcclxuXHRcdHtcclxuXHRcdFx0dGV4dDogJ3JhbmRvbTInLFxyXG5cdFx0XHR2YWx1ZTogJ3JhbmRvbTInXHJcblx0XHR9XHJcblx0XTtcclxuXHRsZXQgaW5wdXRTdGF0ZSA9IHRydWU7XHJcblx0Y29uc3QgY2hhbmdlU3RhdGUgPSAoKSA9PiB7XHJcblx0XHRpbnB1dFN0YXRlID0gIWlucHV0U3RhdGU7XHJcblx0fVxyXG48L3NjcmlwdD4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBZ0d3QixLQUFLLEFBQUMsQ0FBQyxBQUM3QixJQUFJLENBQUUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxJQUFJLENBQ2QsTUFBTSxDQUFFLElBQUksQ0FBQyxJQUFJLENBQ2pCLE9BQU8sQ0FBRSxJQUFJLENBQ2IscUJBQXFCLENBQUUsT0FBTyxTQUFTLENBQUMsQ0FBQyxPQUFPLEtBQUssQ0FBQyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQzVELGtCQUFrQixDQUFFLEtBQUssQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLElBQUksQ0FDMUMsUUFBUSxDQUFFLElBQUksQUFBRSxDQUFDLEFBQ2pCLE9BQU8sSUFBSSxDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUMsWUFBWSxLQUFLLENBQUMsQUFBQyxDQUFDLEFBQ3pDLEtBQUssQUFBQyxDQUFDLEFBQ0wsS0FBSyxDQUFFLEtBQUssQ0FDWixxQkFBcUIsQ0FBRSxJQUFJLEFBQUUsQ0FBQyxBQUFDLENBQUMsQUFDcEMsT0FBTyxJQUFJLENBQUMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxZQUFZLEtBQUssQ0FBQyxBQUFDLENBQUMsQUFDekMsS0FBSyxBQUFDLENBQUMsQUFDTCxrQkFBa0IsQ0FBRSxLQUFLLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxLQUFLLEFBQUUsQ0FBQyxBQUFDLENBQUMsQUFFdEQsT0FBTyxBQUFDLENBQUMsQUFDUCxLQUFLLENBQUUsS0FBSyxDQUNaLE1BQU0sQ0FBRSxJQUFJLENBQ1osTUFBTSxDQUFFLENBQUMsQ0FBQyxJQUFJLEFBQUUsQ0FBQyJ9 */</style>`;
+		/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRm9ybS5zdmVsdGUiLCJzb3VyY2VzIjpbIkZvcm0uc3ZlbHRlIl0sInNvdXJjZXNDb250ZW50IjpbIjxzdmVsdGU6b3B0aW9ucyB0YWc9XCJhcHAtZm9ybVwiPjwvc3ZlbHRlOm9wdGlvbnM+XHJcbjxhcHAtY29udGV4dCB0ZXh0PVwiRmlyc3Qgc2VjdGlvbiBpcyBhIHNob3djYXNlIG9mIGRpZmZlcmVudCBmb3JtIGVsZW1lbnRzIGxpa2UgYGlucHV0YCwgYHRleHRhcmVhYCwgYHNlbGVjdGAuXCI+PC9hcHAtY29udGV4dD5cclxuPHpvby1ncmlkPlxyXG5cdDx0ciBzbG90PVwiaGVhZGVyXCI+XHJcblx0XHQ8dGg+SGVhZGVyIHRleHQgY29udGVudDwvdGg+XHJcblx0XHQ8dGg+SGVhZGVyIG51bWVyaWMgY29udGVudDwvdGg+XHJcblx0PC90cj5cclxuXHQ8dHIgc2xvdD1cInJvd1wiPjx0ZD5Cb2R5IGNvbnRlbnQgMTwvdGQ+PHRkPkJvZHkgY29udGVudCAyPC90ZD48L3RyPlxyXG5cdDx0ciBzbG90PVwicm93XCI+PHRkPkJvZHkgY29udGVudCAzPC90ZD48dGQ+Qm9keSBjb250ZW50IDQ8L3RkPjwvdHI+XHJcblx0PHRyIHNsb3Q9XCJyb3dcIj48dGQ+Qm9keSBjb250ZW50IDU8L3RkPjx0ZD5Cb2R5IGNvbnRlbnQgNjwvdGQ+PC90cj5cclxuXHQ8dHIgc2xvdD1cInJvd1wiIGRpc2FibGVkPjx0ZD5Cb2R5IGNvbnRlbnQgNzwvdGQ+PHRkPkJvZHkgY29udGVudCA4PC90ZD48L3RyPlxyXG5cdDx0ciBzbG90PVwiZm9vdGVyXCI+XHJcblx0XHQ8ZGl2PkZvb3RlciBjb250ZW50IDE8L2Rpdj5cclxuXHRcdDxkaXYgc3R5bGU9XCJ3aWR0aDogMTAwcHhcIj5cclxuXHRcdFx0PHpvby1zZWxlY3QgbGFiZWxwb3NpdGlvbj1cImxlZnRcIiBsYWJlbHRleHQ9XCJQYWdlIHNpemU6XCI+XHJcblx0XHRcdFx0PHNlbGVjdCB0eXBlPVwibnVtYmVyXCIgc2xvdD1cInNlbGVjdGVsZW1lbnRcIj5cclxuXHRcdFx0XHRcdDxvcHRpb24+NTwvb3B0aW9uPlxyXG5cdFx0XHRcdFx0PG9wdGlvbj4xMDwvb3B0aW9uPlxyXG5cdFx0XHRcdFx0PG9wdGlvbj4xNTwvb3B0aW9uPlxyXG5cdFx0XHRcdDwvc2VsZWN0PlxyXG5cdFx0XHQ8L3pvby1zZWxlY3Q+XHJcblx0XHQ8L2Rpdj5cclxuXHQ8L3RyPlxyXG48L3pvby1ncmlkPlxyXG48Zm9ybSBjbGFzcz1cImZvcm1cIj5cclxuXHQ8em9vLWlucHV0IGxhYmVsdGV4dD1cIklucHV0IHR5cGUgdGV4dFwiIGxpbmt0ZXh0PVwiRm9yZ290dGVuIHlvdXIgcGFzc3dvcmQ/XCIgbGlua2hyZWY9XCJodHRwczovL2dvb2dsZS5jb21cIiBsaW5rdGFyZ2V0PVwiYWJvdXQ6YmxhbmtcIlxyXG5cdCB2YWxpZD1cIntpbnB1dFN0YXRlfVwiIGlucHV0ZXJyb3Jtc2c9XCJpbnZhbGlkXCIgaW5mb3RleHQ9XCJBZGRpdGlvbmFsIGhlbHBmdWwgaW5mb3JtYXRpb24gZm9yIG91ciB1c2Vyc1wiPlxyXG5cdFx0PGlucHV0IHNsb3Q9XCJpbnB1dGVsZW1lbnRcIiB0eXBlPVwidGV4dFwiIHBsYWNlaG9sZGVyPVwiaW5wdXRcIiAvPlxyXG5cdDwvem9vLWlucHV0PlxyXG5cdDx6b28taW5wdXQgbGFiZWx0ZXh0PVwiSW5wdXQgdHlwZSBudW1iZXJcIiBsaW5rdGV4dD1cIkZvcmdvdHRlbiB5b3VyIHBhc3N3b3JkP1wiIGxpbmtocmVmPVwiaHR0cHM6Ly9nb29nbGUuY29tXCIgbGlua3RhcmdldD1cImFib3V0OmJsYW5rXCJcclxuXHQgaW5mb3RleHQ9XCJBZGRpdGlvbmFsIGhlbHBmdWwgaW5mb3JtYXRpb24gZm9yIG91ciB1c2Vyc1wiPlxyXG5cdFx0PGlucHV0IHNsb3Q9XCJpbnB1dGVsZW1lbnRcIiB0eXBlPVwibnVtYmVyXCIgcGxhY2Vob2xkZXI9XCJpbnB1dFwiIC8+XHJcblx0PC96b28taW5wdXQ+XHJcblx0PHpvby1pbnB1dCBsYWJlbHRleHQ9XCJUaGlzIGlucHV0IGhhcyB0eXBlIGRhdGVcIiBsaW5rdGV4dD1cIk5hdGl2ZSBkYXRlIHBpY2tlciAtPiBjbGljayBtZVwiIGxpbmtocmVmPVwiaHR0cHM6Ly9naXRodWIuY29tL2pjZ2VydGlnL2RhdGUtaW5wdXQtcG9seWZpbGxcIlxyXG5cdCBsaW5rdGFyZ2V0PVwiYWJvdXQ6YmxhbmtcIiBpbmZvdGV4dD1cIkNsaWNrIG9uIGlucHV0IHRvIHNob3cgY29udGV4dCBtZW51IHdpdGggZGF0ZSBzZWxlY3Rpb25cIj5cclxuXHRcdDxpbnB1dCBzbG90PVwiaW5wdXRlbGVtZW50XCIgdHlwZT1cImRhdGVcIiBwbGFjZWhvbGRlcj1cIkVudGVyIGRhdGVcIiAvPlxyXG5cdDwvem9vLWlucHV0PlxyXG5cdDx6b28taW5wdXQgbGFiZWx0ZXh0PVwiVGhpcyBpbnB1dCBoYXMgdHlwZSB0aW1lXCIgaW5mb3RleHQ9XCJTZWxlY3QgdGltZVwiPlxyXG5cdFx0PGlucHV0IHNsb3Q9XCJpbnB1dGVsZW1lbnRcIiB0eXBlPVwidGltZVwiIHBsYWNlaG9sZGVyPVwiRW50ZXIgdGltZVwiIC8+XHJcblx0PC96b28taW5wdXQ+XHJcblx0PHpvby1pbnB1dCBsYWJlbHRleHQ9XCJUZXh0YXJlYSBleGFtcGxlXCIgdmFsaWQ9XCJ7aW5wdXRTdGF0ZX1cIj5cclxuXHRcdDx0ZXh0YXJlYSBzbG90PVwiaW5wdXRlbGVtZW50XCIgcGxhY2Vob2xkZXI9XCJUZXh0YXJlYVwiPjwvdGV4dGFyZWE+XHJcblx0PC96b28taW5wdXQ+XHJcblx0PHpvby1zZWxlY3QgbGFiZWx0ZXh0PVwiTXVsdGlzZWxlY3RcIiB2YWxpZD1cIntpbnB1dFN0YXRlfVwiIGlucHV0ZXJyb3Jtc2c9XCJWYWx1ZSBpcyByZXF1aXJlZFwiIGluZm90ZXh0PVwiQWRkaXRpb25hbCBoZWxwZnVsIGluZm9ybWF0aW9uIGZvciBvdXIgdXNlcnNcIj5cclxuXHRcdDxzZWxlY3Qgc2xvdD1cInNlbGVjdGVsZW1lbnRcIiBtdWx0aXBsZT5cclxuXHRcdFx0PG9wdGlvbiBjbGFzcz1cInBsYWNlaG9sZGVyXCIgdmFsdWU9XCJcIiBkaXNhYmxlZCBzZWxlY3RlZD5QbGFjZWhvbGRlcjwvb3B0aW9uPlxyXG5cdFx0XHQ8b3B0aW9uPjE8L29wdGlvbj5cclxuXHRcdFx0PG9wdGlvbj4yPC9vcHRpb24+XHJcblx0XHRcdDxvcHRpb24+Mzwvb3B0aW9uPlxyXG5cdFx0PC9zZWxlY3Q+XHJcblx0PC96b28tc2VsZWN0PlxyXG5cdDx6b28tc2VsZWN0IGxhYmVsdGV4dD1cIlN0YW5kYXJkIHNlbGVjdFwiIHZhbGlkPVwie2lucHV0U3RhdGV9XCIgaW5wdXRlcnJvcm1zZz1cIlZhbHVlIGlzIHJlcXVpcmVkXCIgaW5mb3RleHQ9XCJBZGRpdGlvbmFsIGhlbHBmdWwgaW5mb3JtYXRpb24gZm9yIG91ciB1c2Vyc1wiPlxyXG5cdFx0PHNlbGVjdCBzbG90PVwic2VsZWN0ZWxlbWVudFwiPlxyXG5cdFx0XHQ8b3B0aW9uIGNsYXNzPVwicGxhY2Vob2xkZXJcIiB2YWx1ZT1cIlwiIGRpc2FibGVkIHNlbGVjdGVkPlBsYWNlaG9sZGVyPC9vcHRpb24+XHJcblx0XHRcdDxvcHRpb24+MTwvb3B0aW9uPlxyXG5cdFx0XHQ8b3B0aW9uPjI8L29wdGlvbj5cclxuXHRcdFx0PG9wdGlvbj4zPC9vcHRpb24+XHJcblx0XHQ8L3NlbGVjdD5cclxuXHQ8L3pvby1zZWxlY3Q+XHJcblx0PHpvby1zZWFyY2hhYmxlLXNlbGVjdCBsYWJlbHRleHQ9XCJTZWFyY2hhYmxlIG11bHRpcGxlIHNlbGVjdFwiIHBsYWNlaG9sZGVyPVwiUGxhY2Vob2xkZXJcIiBpbmZvdGV4dD1cIkFkZGl0aW9uYWwgaGVscGZ1bCBpbmZvcm1hdGlvbiBmb3Igb3VyIHVzZXJzIHdoaWNoIGlzIGEgbG9uZyB0ZXh0LlwiPlxyXG5cdFx0PHNlbGVjdCBtdWx0aXBsZSBzbG90PVwic2VsZWN0ZWxlbWVudFwiPlxyXG5cdFx0XHR7I2VhY2ggb3B0aW9ucyBhcyBvcHRpb259XHJcblx0XHRcdDxvcHRpb24gdmFsdWU9XCJ7b3B0aW9uLnZhbHVlfVwiPlxyXG5cdFx0XHRcdHtvcHRpb24udGV4dH1cclxuXHRcdFx0PC9vcHRpb24+XHJcblx0XHRcdHsvZWFjaH1cclxuXHRcdDwvc2VsZWN0PlxyXG5cdDwvem9vLXNlYXJjaGFibGUtc2VsZWN0PlxyXG5cdDx6b28tc2VhcmNoYWJsZS1zZWxlY3QgbGFiZWx0ZXh0PVwiU2VhcmNoYWJsZSBzZWxlY3RcIiBwbGFjZWhvbGRlcj1cIlBsYWNlaG9sZGVyXCIgaW5mb3RleHQ9XCJBZGRpdGlvbmFsIGhlbHBmdWwgaW5mb3JtYXRpb24gZm9yIG91ciB1c2Vycy5cIj5cclxuXHRcdDxzZWxlY3Qgc2xvdD1cInNlbGVjdGVsZW1lbnRcIj5cclxuXHRcdFx0eyNlYWNoIG9wdGlvbnMgYXMgb3B0aW9ufVxyXG5cdFx0XHQ8b3B0aW9uIHZhbHVlPVwie29wdGlvbi52YWx1ZX1cIj5cclxuXHRcdFx0XHR7b3B0aW9uLnRleHR9XHJcblx0XHRcdDwvb3B0aW9uPlxyXG5cdFx0XHR7L2VhY2h9XHJcblx0XHQ8L3NlbGVjdD5cclxuXHQ8L3pvby1zZWFyY2hhYmxlLXNlbGVjdD5cclxuXHQ8em9vLWNoZWNrYm94IGhpZ2hsaWdodGVkPVwie3RydWV9XCIgdmFsaWQ9XCJ7aW5wdXRTdGF0ZX1cIiBsYWJlbHRleHQ9XCJBbiBleGFtcGxlIGNoZWNrYm94IHdpdGggc29tZSBhZGRpdGlvbmFsIGV2ZW50IGhhbmRsaW5nIG9mIGNsaWNrcyBpbnNpZGVcIj5cclxuXHRcdDxpbnB1dCBzbG90PVwiY2hlY2tib3hlbGVtZW50XCIgdHlwZT1cImNoZWNrYm94XCIgLz5cclxuXHQ8L3pvby1jaGVja2JveD5cclxuXHQ8em9vLXJhZGlvIHZhbGlkPVwie2lucHV0U3RhdGV9XCIgZXJyb3Jtc2c9XCJlcnJvcm1zZ1wiIGluZm90ZXh0PVwiaW5mb3RleHRcIj5cclxuXHRcdDx0ZW1wbGF0ZT5cclxuXHRcdFx0PGlucHV0IHR5cGU9XCJyYWRpb1wiIGlkPVwiY29udGFjdENob2ljZTFcIiBuYW1lPVwiY29udGFjdFwiIHZhbHVlPVwiZW1haWxcIiBkaXNhYmxlZD5cclxuXHRcdFx0PGxhYmVsIGZvcj1cImNvbnRhY3RDaG9pY2UxXCI+RW1haWw8L2xhYmVsPlxyXG5cdFx0XHQ8aW5wdXQgdHlwZT1cInJhZGlvXCIgaWQ9XCJjb250YWN0Q2hvaWNlMlwiIG5hbWU9XCJjb250YWN0XCIgdmFsdWU9XCJwaG9uZVwiPlxyXG5cdFx0XHQ8bGFiZWwgZm9yPVwiY29udGFjdENob2ljZTJcIj5QaG9uZTwvbGFiZWw+XHJcblx0XHRcdDxpbnB1dCB0eXBlPVwicmFkaW9cIiBpZD1cImNvbnRhY3RDaG9pY2UzXCIgbmFtZT1cImNvbnRhY3RcIiB2YWx1ZT1cIm1haWxcIj5cclxuXHRcdFx0PGxhYmVsIGZvcj1cImNvbnRhY3RDaG9pY2UzXCI+TWFpbDwvbGFiZWw+XHJcblx0XHQ8L3RlbXBsYXRlPlxyXG5cdDwvem9vLXJhZGlvPlxyXG5cclxuXHQ8em9vLXJhZGlvIHZhbGlkPVwie2lucHV0U3RhdGV9XCIgZXJyb3Jtc2c9XCJlcnJvcm1zZ1wiIGluZm90ZXh0PVwiaW5mb3RleHRcIj5cclxuXHRcdDxpbnB1dCB0eXBlPVwicmFkaW9cIiBpZD1cImNvbnRhY3RDaG9pY2U0XCIgbmFtZT1cImNvbnRhY3RcIiB2YWx1ZT1cImVtYWlsXCIgZGlzYWJsZWQ+XHJcblx0XHQ8bGFiZWwgZm9yPVwiY29udGFjdENob2ljZTRcIj5FbWFpbDwvbGFiZWw+XHJcblx0XHQ8aW5wdXQgdHlwZT1cInJhZGlvXCIgaWQ9XCJjb250YWN0Q2hvaWNlNVwiIG5hbWU9XCJjb250YWN0XCIgdmFsdWU9XCJwaG9uZVwiPlxyXG5cdFx0PGxhYmVsIGZvcj1cImNvbnRhY3RDaG9pY2U1XCI+UGhvbmU8L2xhYmVsPlxyXG5cdDwvem9vLXJhZGlvPlxyXG48L2Zvcm0+XHJcbjxkaXYgY2xhc3M9XCJzdWJtaXRcIj5cclxuXHQ8em9vLWJ1dHRvbiB0eXBlPVwiaG90XCIgc2l6ZT1cIm1lZGl1bVwiIG9uOmNsaWNrPVwie2NoYW5nZVN0YXRlfVwiPlxyXG5cdFx0PHNwYW4gc2xvdD1cImJ1dHRvbmNvbnRlbnRcIiBjbGFzcz1cInNsb3R0ZWQtc3BhblwiPlRyaWdnZXIgaW52YWxpZCBzdGF0ZSE8L3NwYW4+XHJcblx0PC96b28tYnV0dG9uPlxyXG48L2Rpdj5cclxuXHJcbjxzdHlsZSB0eXBlPSd0ZXh0L3Njc3MnPi5mb3JtIHtcbiAgZmxleDogMSAwIGF1dG87XG4gIG1hcmdpbjogMjBweCBhdXRvO1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChhdXRvLWZpbGwsIG1pbm1heCgzMjBweCwgMWZyKSk7XG4gIGdyaWQtdGVtcGxhdGUtcm93czogMTIwcHggMTUwcHggMTIwcHggNzBweDtcbiAgZ3JpZC1nYXA6IDIwcHg7IH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1NDRweCkge1xuICAgIC5mb3JtIHtcbiAgICAgIHdpZHRoOiAzMDBweDtcbiAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0bzsgfSB9XG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogODEycHgpIHtcbiAgICAuZm9ybSB7XG4gICAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDEyMHB4IDE1MHB4IDEyMHB4IDEyMHB4OyB9IH1cblxuLnN1Ym1pdCB7XG4gIHdpZHRoOiAyNTBweDtcbiAgaGVpZ2h0OiA1MHB4O1xuICBtYXJnaW46IDAgYXV0bzsgfVxuXG4vKiMgc291cmNlTWFwcGluZ1VSTD14Lm1hcCAqLzwvc3R5bGU+XHJcblxyXG48c2NyaXB0PlxyXG5cdGxldCBvcHRpb25zID0gW1xyXG5cdFx0e1xyXG5cdFx0XHR0ZXh0OiAndGV4dCcsXHJcblx0XHRcdHZhbHVlOiAndmFsdWUnXHJcblx0XHR9LFxyXG5cdFx0e1xyXG5cdFx0XHR0ZXh0OiAncmFOZE9tJyxcclxuXHRcdFx0dmFsdWU6ICdyYW5kb20nXHJcblx0XHR9LFxyXG5cdFx0e1xyXG5cdFx0XHR0ZXh0OiAncmFuZG9tMScsXHJcblx0XHRcdHZhbHVlOiAncmFuZG9tMSdcclxuXHRcdH0sXHJcblx0XHR7XHJcblx0XHRcdHRleHQ6ICdyYW5kb20yJyxcclxuXHRcdFx0dmFsdWU6ICdyYW5kb20yJ1xyXG5cdFx0fVxyXG5cdF07XHJcblx0bGV0IGlucHV0U3RhdGUgPSB0cnVlO1xyXG5cdGNvbnN0IGNoYW5nZVN0YXRlID0gKCkgPT4ge1xyXG5cdFx0aW5wdXRTdGF0ZSA9ICFpbnB1dFN0YXRlO1xyXG5cdH1cclxuPC9zY3JpcHQ+Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXdHd0IsS0FBSyxBQUFDLENBQUMsQUFDN0IsSUFBSSxDQUFFLENBQUMsQ0FBQyxDQUFDLENBQUMsSUFBSSxDQUNkLE1BQU0sQ0FBRSxJQUFJLENBQUMsSUFBSSxDQUNqQixPQUFPLENBQUUsSUFBSSxDQUNiLHFCQUFxQixDQUFFLE9BQU8sU0FBUyxDQUFDLENBQUMsT0FBTyxLQUFLLENBQUMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUM1RCxrQkFBa0IsQ0FBRSxLQUFLLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQzFDLFFBQVEsQ0FBRSxJQUFJLEFBQUUsQ0FBQyxBQUNqQixPQUFPLElBQUksQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLFlBQVksS0FBSyxDQUFDLEFBQUMsQ0FBQyxBQUN6QyxLQUFLLEFBQUMsQ0FBQyxBQUNMLEtBQUssQ0FBRSxLQUFLLENBQ1oscUJBQXFCLENBQUUsSUFBSSxBQUFFLENBQUMsQUFBQyxDQUFDLEFBQ3BDLE9BQU8sSUFBSSxDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUMsWUFBWSxLQUFLLENBQUMsQUFBQyxDQUFDLEFBQ3pDLEtBQUssQUFBQyxDQUFDLEFBQ0wsa0JBQWtCLENBQUUsS0FBSyxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsS0FBSyxBQUFFLENBQUMsQUFBQyxDQUFDLEFBRXRELE9BQU8sQUFBQyxDQUFDLEFBQ1AsS0FBSyxDQUFFLEtBQUssQ0FDWixNQUFNLENBQUUsSUFBSSxDQUNaLE1BQU0sQ0FBRSxDQUFDLENBQUMsSUFBSSxBQUFFLENBQUMifQ== */</style>`;
 
 			init(this, { target: this.shadowRoot }, instance$2, create_fragment$2, safe_not_equal, []);
 
