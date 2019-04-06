@@ -4,7 +4,7 @@
 	{#if backbtn}
 		<div class="back-btn">
 			<zoo-button>
-				<span slot="buttoncontent"><a href="#">Go to top</a></span>
+				<span slot="buttoncontent"><a href="/#">Go to top</a></span>
 			</zoo-button>
 		</div>
 	{/if}

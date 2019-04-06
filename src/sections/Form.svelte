@@ -1,5 +1,19 @@
 <svelte:options tag="app-form"></svelte:options>
 <app-context text="First section is a showcase of different form elements like `input`, `textarea`, `select`."></app-context>
+<zoo-grid>
+	<tr slot="header">
+		<th>Header text content</th>
+		<th>Header numeric content</th>
+	</tr>
+	<tr slot="row"><td>Body content 1</td><td>Body content 2</td></tr>
+	<tr slot="row"><td>Body content 3</td><td>Body content 4</td></tr>
+	<tr slot="row"><td>Body content 5</td><td>Body content 6</td></tr>
+	<tr slot="row" disabled><td>Body content 7</td><td>Body content 8</td></tr>
+	<tr slot="footer">
+		<td colspan="1000">Footer content which is spanned across maximum number of columns which is 1000</td>
+		<!-- <td>Footer content 2</td> -->
+	</tr>
+</zoo-grid>
 <form class="form">
 	<zoo-input labeltext="Input type text" linktext="Forgotten your password?" linkhref="https://google.com" linktarget="about:blank"
 	 valid="{inputState}" inputerrormsg="invalid" infotext="Additional helpful information for our users">
