@@ -12,45 +12,51 @@
 </table>
 
 <style type="text/scss">
-    @import "variables";
+	@import "variables";
 
-    table {
-        border-collapse: collapse;
-        border-spacing: 0px;
-        width: 100%;
-        height: 100%;
-    }
+	:host {
+		display: block;
+	}
 
-    ::slotted(tr:nth-child(2n)) {
-        background: $anti-flash-white;
-    }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0px;
+		width: 100%;
+		height: 100%;
+	}
 
-    ::slotted(tr[disabled]) {
-        background: $grey-chateau;
-        cursor: not-allowed;
-    }
+	::slotted(tr:nth-child(2n)) {
+		background: $anti-flash-white;
+	}
 
-    ::slotted(tr[header]) {
-        color: $grey;
-        font-weight: bold;
-        background: white;
-    }
+	::slotted(tr[disabled]) {
+		background: $grey-chateau;
+		cursor: not-allowed;
+	}
 
-    ::slotted(tr[footer]) {
-        color: $grey;
-        font-weight: bold;
-        background: white;
-    }
+	::slotted(tr[header]) {
+		color: $grey;
+		font-weight: bold;
+		background: white;
+	}
 
-    ::slotted(tr) {
-        text-align: left;
-    }
-    ::slotted(tr[row]:hover) {
-        background: $whisper;
-    }
-    ::slotted(tr[disabled]:hover) {
-        background: $grey-chateau;
-    }
+	::slotted(tr[footer]) {
+		color: $grey;
+		font-weight: bold;
+		background: white;
+	}
+
+	::slotted(tr) {
+		text-align: left;
+	}
+
+	::slotted(tr[row]:hover) {
+		background: $whisper;
+	}
+
+	::slotted(tr[disabled]:hover) {
+		background: $grey-chateau;
+	}
 </style>
 
 <script>

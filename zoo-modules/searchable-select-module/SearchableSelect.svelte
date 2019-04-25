@@ -5,7 +5,7 @@
 			<zoo-tooltip class="selected-options" position="right" text="{tooltipText}" folding="{true}">
 			</zoo-tooltip>
 		{/if}
-		<zoo-input class:mobile="{_isMobile}" infotext="{infotext}" valid="{valid}" on:click="{() => handleInputClick()}"
+		<zoo-input class:mobile="{_isMobile}" infotext="{infotext}" valid="{valid}" on:click="{() => openSearchableSelect()}"
 			type="text" labeltext="{labeltext}" inputerrormsg="{inputerrormsg}"
 			labelposition="{labelposition}" linktext="{linktext}" linkhref="{linkhref}" linktarget="{linktarget}">
 			<input slot="inputelement" type="text" placeholder="{placeholder}" bind:this={searchableInput} on:input="{() => handleSearchChange()}"/>
@@ -115,11 +115,7 @@
 		_selectSlot.addEventListener("slotchange", () => {
 			let select = _selectSlot.assignedNodes()[0];
 			_selectElement = select;
-			_selectElement.addEventListener('change', () => handleOptionClick());
 			options = _selectElement.options;
-			for (const option of options) {
-				option.addEventListener('click', () => handleOptionClick());
-			}
 			if (!options || options.length < 1) {
 				tooltipText = null;
 			}
@@ -129,12 +125,21 @@
 			if (_selectElement.multiple === true) {
 				multiple = true;
 			}
+			if (multiple) {
+				_selectElement.addEventListener('click', () => handleMultipleOptionClick());
+				_selectElement.addEventListener('keydown', e => handleMultipleOptionKeydown(e));
+			} else {
+				_selectElement.addEventListener('click', () => handleOptionClick());
+				_selectElement.addEventListener('keydown', e => handleOptionKeydown(e));
+			}
+
 			_selectElement.classList.add('searchable-zoo-select');
 			_hideSelectOptions();
 			changeValidState(valid);
 	    });
 		searchableInput.addEventListener('focus', () => {
 			_selectElement.classList.remove('hidden');
+			openSearchableSelect();
 		});
 		searchableInput.addEventListener('blur', event => {
 			if (event.relatedTarget !== _selectElement) {
@@ -146,14 +151,39 @@
 	const handleSearchChange = () => {
 		const inputVal = searchableInput.value.toLowerCase();
 		for (const option of options) {
-			if (option.text.toLowerCase().startsWith(inputVal)) option.style.display = 'block';
+			if (option.text.toLowerCase().indexOf(inputVal) > -1) option.style.display = 'block';
 			else option.style.display = 'none';
 		}
 	};
 
-	const handleInputClick = () => {
+	const openSearchableSelect = () => {
 		if (!multiple) {
 			_selectElement.size = 4;
+		}
+	}
+
+	const handleMultipleOptionKeydown = e => {
+		if (e.keyCode && e.keyCode === 13) {
+			handleMultipleOptionClick();
+		}
+	}
+
+	const handleMultipleOptionClick = () => {
+		let inputValString = '';
+		for (const selectedOpts of _selectElement.selectedOptions) {
+			inputValString += selectedOpts.text + ', \n';
+		}
+		inputValString = inputValString.substr(0, inputValString.length - 3);
+		tooltipText = inputValString;
+		searchableInput.placeholder = inputValString && inputValString.length > 0 ? inputValString : placeholder;
+		for (const option of options) {
+			option.style.display = 'block';
+		}
+	}
+
+	const handleOptionKeydown = e => {
+		if (e.keyCode && e.keyCode === 13) {
+			handleOptionClick();
 		}
 	}
 
@@ -165,9 +195,7 @@
 		inputValString = inputValString.substr(0, inputValString.length - 3);
 		tooltipText = inputValString;
 		searchableInput.placeholder = inputValString && inputValString.length > 0 ? inputValString : placeholder;
-		if (!multiple) {
-			_hideSelectOptions();
-		}
+		_hideSelectOptions();
 		for (const option of options) {
 			option.style.display = 'block';
 		}
@@ -176,9 +204,6 @@
 	const _hideSelectOptions = () => {
 		_selectElement.classList.add('hidden');
 		searchableInput.value = null;
-		if (!multiple) {
-			_selectElement.size = 1;
-		}
 	}
 
 	const changeValidState = (state) => {

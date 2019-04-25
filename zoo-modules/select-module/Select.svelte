@@ -20,10 +20,11 @@
 
 	.arrows {
 		position: absolute;
-		right: 5px;
-		top: 13px;
+		right: 1%;
+		top: 6%;
 		transform: rotate(90deg);
 		pointer-events: none;
+		height: 100%;
 
 		& > path {
 			fill: $matterhorn;

@@ -10,16 +10,18 @@
 	<tr slot="row"><td>Body content 5</td><td>Body content 6</td></tr>
 	<tr slot="row" disabled><td>Body content 7</td><td>Body content 8</td></tr>
 	<tr slot="footer">
-		<div>Footer content 1</div>
-		<div style="width: 100px">
-			<zoo-select labelposition="left" labeltext="Page size:">
-				<select type="number" slot="selectelement">
-					<option>5</option>
-					<option>10</option>
-					<option>15</option>
-				</select>
-			</zoo-select>
-		</div>
+		<td><div>Footer content 1</div></td>
+		<td>
+			<div style="width: 100px; margin-left: auto;">
+				<zoo-select labelposition="left" labeltext="Page size:">
+					<select type="number" slot="selectelement" style="padding: 3px;">
+						<option>5</option>
+						<option>10</option>
+						<option>15</option>
+					</select>
+				</zoo-select>
+			</div>
+		</td>
 	</tr>
 </zoo-grid>
 <form class="form">
